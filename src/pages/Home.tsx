@@ -39,7 +39,7 @@ export function Home() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <div className="split">
+            <div className="split split-profile">
               <div>
                 <span className="page-kicker">Principal Investigator</span>
                 <h2
@@ -82,21 +82,12 @@ export function Home() {
                   ))}
                 </div>
               </div>
-              <div>
+              <div className="pi-photo-wrap">
                 <img
                   className="pi-photo"
                   src="/images/pi-portrait.jpg"
                   alt={`${site.pi.name}, Principal Investigator`}
                 />
-                <p
-                  style={{
-                    margin: '0.75rem 0 0',
-                    color: 'var(--muted)',
-                    fontSize: '0.85rem',
-                  }}
-                >
-                  Temporary lab portrait — replace with formal headshot when available.
-                </p>
               </div>
             </div>
           </Reveal>
@@ -138,7 +129,12 @@ export function Home() {
                     </Link>
                   </div>
                 </div>
-                <div className="grant-logo">
+                <div className="grant-logo grant-logo-stack">
+                  <img
+                    className="logo-anrf"
+                    src="/images/anrf-mark.svg"
+                    alt="Anusandhan National Research Foundation (ANRF)"
+                  />
                   <img src="/images/serb-dst-logo.jpg" alt="SERB, DST, Government of India" />
                 </div>
               </div>

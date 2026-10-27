@@ -20,11 +20,13 @@ export function People() {
           <Reveal>
             <div className="people-grid">
               <aside className="pi-card">
-                <img
-                  className="pi-photo"
-                  src="/images/pi-portrait.jpg"
-                  alt={`${site.pi.name}, Principal Investigator`}
-                />
+                <div className="pi-photo-wrap">
+                  <img
+                    className="pi-photo"
+                    src="/images/pi-portrait.jpg"
+                    alt={`${site.pi.name}, Principal Investigator`}
+                  />
+                </div>
                 <h2>{site.pi.name}</h2>
                 <div className="role">{site.pi.role}</div>
                 <div className="prose">
@@ -34,10 +36,6 @@ export function People() {
                     {site.pi.department}
                     <br />
                     {site.pi.institution}
-                  </p>
-                  <p style={{ fontSize: '0.85rem' }}>
-                    Temporary portrait from lab materials. A formal headshot can replace this image
-                    later.
                   </p>
                 </div>
               </aside>

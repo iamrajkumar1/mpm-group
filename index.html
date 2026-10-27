@@ -15,6 +15,17 @@
       rel="stylesheet"
     />
     <title>MPM Group | Dr. Milind P. Meshram</title>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('mpm-theme')
+          var theme = stored === 'dark' ? 'dark' : 'light'
+          document.documentElement.setAttribute('data-theme', theme)
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+      })()
+    </script>
   </head>
   <body>
     <div id="root"></div>

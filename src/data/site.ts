@@ -43,12 +43,19 @@ export const site = {
 }
 
 export const researchInterests = [
-  'Organic Synthesis',
+  'Organic Syntheses',
   'Organometallics',
   'Macromolecules / Cyclophane Chemistry',
-  'Transition-Metal-Catalyzed Reactions',
   'Natural Product Synthesis',
   'Total Synthesis',
+  'Transition-Metal-Catalyzed Reactions',
+  'Suzuki–Miyaura Cross-Coupling',
+  'Heck Coupling',
+  'Sonogashira Coupling',
+  'Metathesis',
+  'Carbonyl–Alkyne Metathesis',
+  'Carbonyl–Alkene Metathesis',
+  'Carbonyl–Allene Metathesis',
 ]
 
 export const specificAims = [
@@ -80,6 +87,7 @@ export const experience = [
     org: "MVP Samaj's KTHM College, Nashik",
     period: '2019 – Present',
     detail: 'Department of Chemistry; Principal Investigator, Organic Syntheses Laboratory (MPM Group).',
+    image: '/images/kthm-campus.jpg',
   },
   {
     role: 'Post-Doctoral Research Associate',
@@ -87,6 +95,7 @@ export const experience = [
     period: '2015 – 2019',
     detail:
       'Transition-metal-catalyzed reactions. Research adviser: Prof. Sambasivarao Kotha.',
+    image: '/images/iit-bombay.jpg',
   },
   {
     role: 'Post-Doctoral Fellow (Erasmus Mundus / EMINTE)',
@@ -94,6 +103,7 @@ export const experience = [
     period: '2014 – 2015',
     detail:
       'Synthesis of natural product analogues by iodocyclization and C–H activation. Research adviser: Prof. Dr. Erik Van der Eycken.',
+    image: '/images/ku-leuven.jpg',
   },
   {
     role: 'Research Assistant',
@@ -101,6 +111,7 @@ export const experience = [
     period: '2013 – 2014',
     detail:
       'Design of new polycyclics. Research adviser: Prof. Sambasivarao Kotha.',
+    image: '/images/iit-bombay.jpg',
   },
 ]
 
@@ -111,6 +122,7 @@ export const education = [
     period: '2007 – 2013',
     detail:
       'Thesis: Design and synthesis of conformationally constrained α-amino acid (AAA) derivatives and polycyclic aromatics via the Diels–Alder reaction as a key step. Supervisor: Prof. Sambasivarao Kotha.',
+    image: '/images/iit-bombay.jpg',
   },
   {
     degree: 'M.Sc. (Organic Chemistry)',

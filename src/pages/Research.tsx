@@ -28,8 +28,13 @@ export function Research() {
                   <span>{site.grant.amountExact}</span>
                 </div>
               </div>
-              <div className="grant-logo">
-                <img src="/images/serb-dst-logo.jpg" alt="SERB DST logo" />
+              <div className="grant-logo grant-logo-stack">
+                <img
+                  className="logo-anrf"
+                  src="/images/anrf-mark.svg"
+                  alt="Anusandhan National Research Foundation (ANRF)"
+                />
+                <img src="/images/serb-dst-logo.jpg" alt="SERB, DST, Government of India" />
               </div>
             </div>
           </Reveal>

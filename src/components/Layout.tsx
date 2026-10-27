@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { site } from '../data/site'
+import { ThemeToggle } from './ThemeToggle'
 
 const links = [
   { to: '/', label: 'Home', end: true },
@@ -41,29 +42,31 @@ export function Layout() {
             <span className="brand-sub">{site.labFullName}</span>
           </NavLink>
 
-          <button
-            className="menu-toggle"
-            aria-expanded={open}
-            aria-label="Toggle navigation"
-            onClick={() => setOpen((v) => !v)}
-          >
-            <span />
-            <span />
-            <span />
-          </button>
-
-          <nav className={`nav${open ? ' open' : ''}`} aria-label="Primary">
-            {links.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                end={link.end}
-                className={({ isActive }) => (isActive ? 'active' : undefined)}
-              >
-                {link.label}
-              </NavLink>
-            ))}
-          </nav>
+          <div className="header-actions">
+            <ThemeToggle />
+            <button
+              className="menu-toggle"
+              aria-expanded={open}
+              aria-label="Toggle navigation"
+              onClick={() => setOpen((v) => !v)}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+            <nav className={`nav${open ? ' open' : ''}`} aria-label="Primary">
+              {links.map((link) => (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  end={link.end}
+                  className={({ isActive }) => (isActive ? 'active' : undefined)}
+                >
+                  {link.label}
+                </NavLink>
+              ))}
+            </nav>
+          </div>
         </div>
       </header>
 

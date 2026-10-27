@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 150" role="img" aria-label="Anusandhan National Research Foundation">
+  <rect width="560" height="150" fill="#ffffff"/>
+  <!-- Geometric A mark -->
+  <g transform="translate(24,28) scale(1.05)">
+    <polygon points="48,4 92,100 74,100 64,74 32,74 22,100 4,100" fill="#0E7EB5"/>
+    <polygon points="48,4 64,74 48,74 40,52 32,74 48,4" fill="#1BB0E0"/>
+    <polygon points="48,4 32,74 16,74" fill="#5ED3F2"/>
+    <rect x="34" y="58" width="28" height="10" fill="#ffffff"/>
+  </g>
+  <line x1="128" y1="32" x2="128" y2="118" stroke="#D0D7E2" stroke-width="2"/>
+  <text x="148" y="58" font-family="IBM Plex Sans, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">
+    <tspan fill="#1BB0E0">A</tspan><tspan fill="#0B2F55">nusandhan</tspan>
+  </text>
+  <text x="148" y="90" font-family="IBM Plex Sans, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">
+    <tspan fill="#1BB0E0">N</tspan><tspan fill="#0B2F55">ational </tspan><tspan fill="#1BB0E0">R</tspan><tspan fill="#0B2F55">esearch</tspan>
+  </text>
+  <text x="148" y="122" font-family="IBM Plex Sans, Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">
+    <tspan fill="#1BB0E0">F</tspan><tspan fill="#0B2F55">oundation</tspan>
+  </text>
+</svg>

@@ -15,17 +15,13 @@ export function About() {
       <section className="section-tight">
         <div className="container">
           <Reveal>
-            <div className="split">
-              <div>
+            <div className="split split-profile">
+              <div className="pi-photo-wrap">
                 <img
                   className="pi-photo"
                   src="/images/pi-portrait.jpg"
-                  alt={`${site.pi.name} at the laboratory`}
+                  alt={`${site.pi.name}, Principal Investigator`}
                 />
-                <p style={{ margin: '0.75rem 0 0', color: 'var(--muted)', fontSize: '0.85rem' }}>
-                  Placeholder portrait from lab documents — swap with a formal profile photograph
-                  when ready.
-                </p>
               </div>
               <div className="prose">
                 <p>
@@ -37,7 +33,7 @@ export function About() {
                 </p>
                 <p>
                   Since 2019 he has served as Assistant Professor at KTHM College, Nashik, where he
-                  leads the MPM Group and a DST-SERB major project on transition-metal-catalyzed
+                  leads the MPM Group and a DST-SERB / ANRF major project on transition-metal-catalyzed
                   construction of polycycles, cyclophanes, and ferrocene-based macrocycles.
                 </p>
                 <p>
@@ -73,6 +69,39 @@ export function About() {
         <div className="container">
           <Reveal>
             <div className="section-head">
+              <h2>PhD & postdoctoral training</h2>
+              <p>IIT Bombay for the doctorate; KU Leuven for the Erasmus Mundus postdoc.</p>
+            </div>
+            <div className="affiliation-grid">
+              <article className="affiliation-card">
+                <img src="/images/iit-bombay.jpg" alt="Indian Institute of Technology Bombay" />
+                <div className="body">
+                  <span className="eyebrow">Ph.D.</span>
+                  <h3>Indian Institute of Technology Bombay</h3>
+                  <p>
+                    Synthetic Organic Chemistry (2007–2013). Supervisor: Prof. Sambasivarao Kotha.
+                  </p>
+                </div>
+              </article>
+              <article className="affiliation-card">
+                <img src="/images/ku-leuven.jpg" alt="KU Leuven, Belgium" />
+                <div className="body">
+                  <span className="eyebrow">Postdoctoral fellow</span>
+                  <h3>KU Leuven, Belgium — LOMAC</h3>
+                  <p>
+                    Erasmus Mundus / EMINTE (2014–2015). Adviser: Prof. Dr. Erik Van der Eycken.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <Reveal>
+            <div className="section-head">
               <h2>Professional experience</h2>
             </div>
             <div className="timeline">
@@ -94,7 +123,7 @@ export function About() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-muted">
         <div className="container">
           <Reveal>
             <div className="section-head">
@@ -123,7 +152,7 @@ export function About() {
         </div>
       </section>
 
-      <section className="section section-muted">
+      <section className="section">
         <div className="container">
           <Reveal>
             <div className="section-head">
@@ -144,12 +173,11 @@ export function About() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-muted">
         <div className="container">
           <Reveal>
             <div className="section-head">
               <h2>Symposia & meetings</h2>
-              <p>Selected participation and presentations (13 listed on CV).</p>
             </div>
             <div className="member-list">
               {symposia.map((item) => (
