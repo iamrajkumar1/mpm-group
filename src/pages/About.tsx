@@ -166,8 +166,34 @@ export function About() {
                 <div className="timeline-item" key={item.title}>
                   <div className="timeline-year">{item.year}</div>
                   <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.detail}</p>
+                    <h3>
+                      {'href' in item && item.href ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="award-link"
+                        >
+                          {item.title}
+                        </a>
+                      ) : (
+                        item.title
+                      )}
+                    </h3>
+                    <p>
+                      {'href' in item && item.href ? (
+                        <a
+                          href={item.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="award-link"
+                        >
+                          {item.detail}
+                        </a>
+                      ) : (
+                        item.detail
+                      )}
+                    </p>
                   </div>
                 </div>
               ))}

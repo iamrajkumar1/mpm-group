@@ -157,6 +157,12 @@ export const education = [
 
 export const awards = [
   {
+    year: 'Award',
+    title: 'Excellent Researcher Award',
+    detail: 'BY SCIENTIFIC LAURELS',
+    href: 'https://www.scientificlaurels.com/biography/fgk30n',
+  },
+  {
     year: '2014',
     title: 'EMINTE Post-Doctoral Fellowship',
     detail: 'Erasmus Mundus Program, Belgium',
