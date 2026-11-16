@@ -157,7 +157,7 @@ export const education = [
 
 export const awards = [
   {
-    year: 'Award',
+    year: '2026',
     title: 'Excellent Researcher Award',
     detail: 'BY SCIENTIFIC LAURELS',
     href: 'https://www.scientificlaurels.com/biography/fgk30n',
