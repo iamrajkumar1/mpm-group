@@ -1065,8 +1065,7 @@ select {
 
 .award-link {
   color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
+  text-decoration: none;
 }
 
 .award-link:hover {
@@ -1075,9 +1074,15 @@ select {
 
 .timeline-item h3 .award-link {
   color: var(--navy);
+  font: inherit;
 }
 
-.timeline-item h3 .award-link:hover {
+.timeline-item p .award-link {
+  color: var(--muted);
+}
+
+.timeline-item h3 .award-link:hover,
+.timeline-item p .award-link:hover {
   color: var(--accent);
 }
 
