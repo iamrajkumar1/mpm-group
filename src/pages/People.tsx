@@ -2,7 +2,23 @@ import { useState } from 'react'
 import { Lightbox } from '../components/Lightbox'
 import { PageHero } from '../components/PageHero'
 import { Reveal } from '../components/Reveal'
-import { site, team } from '../data/site'
+import { site, team, type TeamMember } from '../data/site'
+
+function MemberList({ members }: { members: TeamMember[] }) {
+  return (
+    <div className="member-list">
+      {members.map((person) => (
+        <div className="member" key={`${person.name}-${person.role ?? 'member'}-${person.since ?? ''}`}>
+          <div>
+            <strong>{person.name}</strong>
+            {person.role ? <span>{person.role}</span> : null}
+          </div>
+          {person.since ? <span>{person.since}</span> : null}
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export function People() {
   const [lightbox, setLightbox] = useState<{ src: string; caption: string } | null>(null)
@@ -12,7 +28,7 @@ export function People() {
       <PageHero
         kicker="People"
         title="The research team"
-        lead="PhD scholars, project associates, and MSc students working with Dr. Meshram in the Organic Syntheses Laboratory."
+        lead="Present and former students of the Organic Syntheses Laboratory with Dr. Meshram."
       />
 
       <section className="section-tight">
@@ -38,52 +54,29 @@ export function People() {
                     {site.pi.institution}
                   </p>
                 </div>
+                <div className="profile-links">
+                  {site.pi.profiles.map((profile) => (
+                    <a
+                      key={profile.label}
+                      href={profile.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {profile.label}
+                    </a>
+                  ))}
+                </div>
               </aside>
 
               <div className="member-groups">
                 <div className="member-group">
-                  <h3>PhD students</h3>
-                  <div className="member-list">
-                    {team.phd.map((person) => (
-                      <div className="member" key={person.name}>
-                        <div>
-                          <strong>{person.name}</strong>
-                          <span>{person.role}</span>
-                        </div>
-                        <span>{person.since}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <h3>Present students</h3>
+                  <MemberList members={team.present} />
                 </div>
 
                 <div className="member-group">
-                  <h3>Project associate</h3>
-                  <div className="member-list">
-                    {team.project.map((person) => (
-                      <div className="member" key={person.name}>
-                        <div>
-                          <strong>{person.name}</strong>
-                          <span>{person.role}</span>
-                        </div>
-                        <span>{person.since}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="member-group">
-                  <h3>MSc project students</h3>
-                  <div className="member-list">
-                    {team.msc.map((person) => (
-                      <div className="member" key={person.name}>
-                        <div>
-                          <strong>{person.name}</strong>
-                          <span>{person.role}</span>
-                        </div>
-                        <span>{person.since}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <h3>Former students</h3>
+                  <MemberList members={team.former} />
                 </div>
               </div>
             </div>

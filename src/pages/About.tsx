@@ -47,14 +47,17 @@ export function About() {
                   . Books / book chapters: 01 each. Invited lectures: 05.
                 </p>
                 <div className="cta-row" style={{ marginTop: '1.25rem' }}>
-                  <a
-                    className="btn btn-primary"
-                    href={site.pi.scholar}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Google Scholar
-                  </a>
+                  {site.pi.profiles.map((profile, index) => (
+                    <a
+                      key={profile.label}
+                      className={index === 0 ? 'btn btn-primary' : 'btn btn-outline'}
+                      href={profile.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {profile.label}
+                    </a>
+                  ))}
                   <Link className="btn btn-outline" to="/contact">
                     Contact details
                   </Link>

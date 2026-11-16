@@ -39,9 +39,18 @@ export function Contact() {
                   </li>
                   <li>
                     <span>Profiles</span>
-                    <a href={site.pi.scholar} target="_blank" rel="noreferrer">
-                      Google Scholar
-                    </a>
+                    <div className="profile-links">
+                      {site.pi.profiles.map((profile) => (
+                        <a
+                          key={profile.label}
+                          href={profile.href}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {profile.label}
+                        </a>
+                      ))}
+                    </div>
                   </li>
                 </ul>
               </div>

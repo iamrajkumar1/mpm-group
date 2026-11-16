@@ -878,6 +878,25 @@ select {
   margin-bottom: 0.75rem;
 }
 
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.9rem;
+  margin-top: 1rem;
+}
+
+.profile-links a {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.profile-links a:hover {
+  color: var(--navy);
+}
+
 .member-groups {
   display: grid;
   gap: 1.5rem;

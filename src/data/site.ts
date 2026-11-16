@@ -15,6 +15,9 @@ export const site = {
     emails: ['milindmeshram@kthmcollege.ac.in', 'milind.iit@gmail.com'],
     scholar:
       'https://scholar.google.com/citations?user=Kja6zL4AAAAJ&hl=en',
+    scopus:
+      'https://www.scopus.com/authid/detail.uri?authorId=33167680600',
+    orcid: 'https://orcid.org/0000-0002-8922-4363',
     address:
       'Department of Chemistry, KTHM College, Gangapur Road, Shivaji Nagar, Nashik-422002, Maharashtra, India',
     experience: {
@@ -24,6 +27,20 @@ export const site = {
     memberships: [
       { label: 'ACS Member', id: '33290821' },
       { label: 'MRSC', id: '809153' },
+    ],
+    profiles: [
+      {
+        label: 'Google Scholar',
+        href: 'https://scholar.google.com/citations?user=Kja6zL4AAAAJ&hl=en',
+      },
+      {
+        label: 'Scopus',
+        href: 'https://www.scopus.com/authid/detail.uri?authorId=33167680600',
+      },
+      {
+        label: 'ORCID',
+        href: 'https://orcid.org/0000-0002-8922-4363',
+      },
     ],
   },
   grant: {
@@ -166,25 +183,38 @@ export const awards = [
   },
 ]
 
+export type TeamMember = {
+  name: string
+  role?: string
+  since?: string
+}
+
 export const team = {
-  phd: [
+  present: [
     { name: 'Mr. B. K. Ghotekar', role: 'PhD Student', since: 'April 2023' },
     { name: 'Mr. P. V. Ambre', role: 'PhD Student', since: 'July 2023' },
-  ],
-  project: [
+    {
+      name: 'Mr. P. S. Boraste',
+      role: 'DST-ANRF – Project Associate-I',
+      since: 'October 2026',
+    },
+  ] as TeamMember[],
+  former: [
     {
       name: 'Mr. S. S. Patade',
       role: 'DST – Project Associate-I',
       since: 'January 2024',
     },
-  ],
-  msc: [
     { name: 'Mr. P. S. Boraste', role: 'MSc Project', since: 'March 2023' },
     { name: 'Mr. P. R. Agre', role: 'MSc Project', since: 'April 2023' },
     { name: 'Mr. S. B. Gangurde', role: 'MSc Project', since: 'April 2023' },
     { name: 'Ms. M. S. Chaughule', role: 'MSc Project', since: 'February 2024' },
-    { name: 'Ms. K. P. Ahire', role: 'MSc Project', since: 'February 2024' },
-  ],
+    { name: 'Ms. K. P. Aher', role: 'MSc Project', since: 'February 2024' },
+    { name: 'Ms. D. R. Aher', role: 'MSc Project', since: 'February 2024' },
+    { name: 'Mr. P. A. Mahajan' },
+    { name: 'Mr. P. P. Khairnar' },
+    { name: 'Mr. L. B. Jadhav' },
+  ] as TeamMember[],
 }
 
 export const equipment = [

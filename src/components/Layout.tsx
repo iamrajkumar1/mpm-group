@@ -101,9 +101,16 @@ export function Layout() {
                 <NavLink to="/research">Research</NavLink>
                 <NavLink to="/publications">Publications</NavLink>
                 <NavLink to="/lab">Laboratory</NavLink>
-                <a href={site.pi.scholar} target="_blank" rel="noreferrer">
-                  Google Scholar
-                </a>
+                {site.pi.profiles.map((profile) => (
+                  <a
+                    key={profile.label}
+                    href={profile.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {profile.label}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
